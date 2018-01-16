@@ -6,7 +6,7 @@ Complete information about the algorithm as well as reference C++ implementation
 
 Please note, current implementation includes only variations of the algorithm with a state of 64-bits. It doesn't include some useful features from the reference implementation, instead of that it provides an interface that should cover various use-cases.
 
-Resulting artifact is a kotlin-common library that could be used within either JS or Java environment.
+Resulting artifact supposed to be a kotlin-common library that could be used within either JS or Java environment. For now we have separate artifacts for each respective platform. 
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ $ gradle assemble
 
 All tests are platform-independent and can be found in `common/src/tests` directory.
 
-Subprojects `js/` and `jvm/` don't contain any code, although they're needed in order to run tests on respective platforms.
+Subprojects `js/` and `jvm/` don't contain any code, although they're needed for generating artifacts and running tests on each respective platform.
 
 Run tests:
 ```
@@ -46,7 +46,7 @@ $ gradle build
 
 ## Using as a library
 
-Distribution provides three variations of the algorithm:
+Library provides three variations of the algorithm:
 ```kotlin
 class XshRs  { /* */ }
 class XshRr  { /* */ }
@@ -71,7 +71,7 @@ fun foo(seed: Long) {
 }
 ```
 
-Distribution also provides predefined generators for simple and easy start:
+Library also provides predefined generators for simple and easy start:
 ```kotlin
 import fretheo.pcg.variants.xshrs.Random
 // or '...xshrr.Random'
