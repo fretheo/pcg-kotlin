@@ -1,5 +1,7 @@
 /*
- *    Copyright 2018  Serge Khlebnikov
+ *     Copyright 2018       Serge Khlebnikov <khlebnikov.sergey@gmail.com>,
+ *               2014-2017  Melissa O'Neill <oneill@pcg-random.org>,
+ *                          and the PCG Project contributors
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
