@@ -1,6 +1,6 @@
 allprojects {
     group 'fretheo.pcg'
-    version '0.1'
+    version '0.0.1'
 }
 
 buildscript {
