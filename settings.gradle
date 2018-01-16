@@ -1,0 +1,5 @@
+rootProject.name = 'pcg-kotlin'
+
+include ':common'
+include ':jvm'
+include ':js'

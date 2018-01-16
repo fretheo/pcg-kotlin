@@ -1,0 +1,9 @@
+apply plugin: 'kotlin-platform-jvm'
+
+archivesBaseName = 'pcg-kotlin-jvm'
+
+dependencies {
+    expectedBy project(':common')
+    compile libraries['kotlin_stdlib']
+    testCompile libraries['kotlin_test_junit']
+}

@@ -1,0 +1,46 @@
+allprojects {
+    group 'fretheo.pcg'
+    version '0.1'
+}
+
+buildscript {
+    ext {
+        kotlinVersion = '1.2.10'
+        gradleNodePluginVersion = '1.2.0'
+        gradleJsPluginVersion = '2.14.1'
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "com.eriwen:gradle-js-plugin:$gradleJsPluginVersion"
+        classpath "com.moowork.gradle:gradle-node-plugin:$gradleNodePluginVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+ext {
+    nodeVersion = '8.9.4'
+    qunitVersion = '2.4.1'
+
+    libraries = [
+            junit                         : "junit:junit:4.12",
+            kotlin_stdlib                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+            kotlin_stdlib_common          : "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion",
+            kotlin_stdlib_js              : "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion",
+            kotlin_test_annotations_common: "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlinVersion",
+            kotlin_test_common            : "org.jetbrains.kotlin:kotlin-test-common:$kotlinVersion",
+            kotlin_test_js                : "org.jetbrains.kotlin:kotlin-test-js:$kotlinVersion",
+            kotlin_test_junit             : "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion",
+    ]
+}
+
+subprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
