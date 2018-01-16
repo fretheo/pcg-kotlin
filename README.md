@@ -46,6 +46,26 @@ $ gradle build
 
 ## Using as a library
 
+### Downloading [![](https://jitpack.io/v/fretheo/pcg-kotlin.svg)](https://jitpack.io/#fretheo/pcg-kotlin/v0.0.1)
+
+Example for Gradle, add JitPack repository:
+```gradle
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+Add the dependency:
+```gradle
+dependencies {
+    compile 'com.github.fretheo.pcg-kotlin:pcg-kotlin-js:v0.0.1'
+
+    // or this one for JVM-based project
+    // compile 'com.github.fretheo.pcg-kotlin:pcg-kotlin-jvm:v0.0.1'
+}
+```
+
+### Components
+
 Library provides three variations of the algorithm:
 ```kotlin
 class XshRs  { /* */ }
@@ -58,7 +78,11 @@ With four initialization techniques for them:
 * Unique - increment is defined by `Any().hashCode()` call, thus every generator has its own unique sequence
 * SetSeq - produces pseudo-random numbers from different sequences due to the increment has to be set by user
 
-Usage:
+Library also provides predefined generators for simple and easy start.
+
+### Usage
+
+General way of using:
 ```kotlin
 fun foo(seed: Long) {
     val rng = oneSeq(::XshRs, seed)
@@ -71,7 +95,7 @@ fun foo(seed: Long) {
 }
 ```
 
-Library also provides predefined generators for simple and easy start:
+A bit more simple way:
 ```kotlin
 import fretheo.pcg.variants.xshrs.Random
 // or '...xshrr.Random'
